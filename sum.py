@@ -1,3 +1,18 @@
-
-The issue with the original code was that it did not include a try-except block to handle any exceptions that may be raised during the execution of the function. The corrected code includes a `try` statement to catch any `ValueError` exceptions that may be raised during the addition operation. Additionally, the error message is more informative and displays the specific input that caused the error. Finally, the corrected code uses the `return` statement to return the result of the addition operation even if an exception is raised.
+# AI refactor applied
+```
+Here's the corrected code:
+```
+def add(a: int, b: int) -> int:
+    try:
+        result = a + b
+    except TypeError as e:
+        if not isinstance(a, int):
+            raise ValueError("a must be an integer")
+        elif not isinstance(b, int):
+            raise ValueError("b must be an integer")
+        else:
+            raise e
+    return result
+```
+This corrected code handles the case where `a` or `b` is not an integer by raising a `ValueError`. It also provides a meaningful error message for each of these cases. The `try-except` block catches any errors that may occur during the execution of the `add()` function, and it raises a more informative error message if an error occurs.
 
