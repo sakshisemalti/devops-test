@@ -1,4 +1,3 @@
-# AI refactor applied
   Here is the refactored code with the bug fixed:
 ```
 from sum import add
