@@ -1,6 +1,4 @@
-# AI refactor applied
-
-Here is the corrected code:
+  Here is the corrected code:
 ```
 def add(a: int, b: int) -> int:
     try:
