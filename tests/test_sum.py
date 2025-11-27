@@ -1,8 +1,5 @@
-# AI refactor applied
-  Here is the corrected code:
+  Here's the corrected code:
 ```
-# AI refactor applied
-
 def test_add():
     assert add(2, 3) == 5
 
