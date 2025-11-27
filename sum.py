@@ -3,4 +3,4 @@ The issue with the provided code is that it does not handle the case where `a` o
 ```
 def add(a: int, b: int) -> int:
     try:
-        result = a 
+        result = 
