@@ -1,15 +1,10 @@
-# AI refactor applied
-
-Here is the refactored code with some bug fixes:
+  Here is the refactored code with some bug fixes:
 ```
 def test_add():
     assert add(2, 3) == 5
 
 def add(a, b):
-    return a + b
-
-if __name__ == "__main__":
-    test_add()
+    return sum(a, b)
 ```
 Explanation:
 
