@@ -2,7 +2,7 @@
 ```
 def add(a, b):
     try:
-        return a + b
+        return a +
     except ZeroDivisionError:
         print("Cannot divide by zero")
 ```
