@@ -1,16 +1,11 @@
-# AI refactor applied
-[PYTHON]
-def add(a: int, b: int) -> int:
-    try:
-        result = a + b
-    except TypeError as e:
-        raise ValueError("Invalid input. Both 'a' and 'b' must be integers.") from e
-    return result
-[/PYTHON]
+  Sure, here's the corrected code based on the test failures you provided:
 ```
-This version of the code uses a `try-except` block to handle the case where either `a` or `b` is not an integer. If an error occurs during the addition, the except block will catch it and raise a more informative error message, which is a `ValueError` with a specific message.
+def add(a: int, b: int) -> int:
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise ValueError("Invalid input. Both 'a' and 'b' must be integers.")
+    return a + b
+```
+This code uses the `isinstance` function to check that both inputs are of type `int`, and raises a `ValueError` with a specific message if this condition is not met. The return type of the function is now specified as `int`, which ensures that the function always returns an integer value when both inputs are valid integers.
 
-Additionally, the return type of the function is now specified as `int`, which ensures that the function always returns an integer value when both inputs are valid integers.
-
-This corrected version of the code should be more robust and user-friendly in the face of unexpected input values.
+This corrected version of the code should be more robust and user-friendly in the face of unexpected input values, and it should also match the behavior of the previous version of the code.
 
