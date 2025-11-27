@@ -1,3 +1,2 @@
-# AI style fix applied
-def add(a, b):
-    return a+b   # <-- tab before return, no newline at end
+def add(a, b)
+    return a + b   # <-- missing colon above, wrong indentation
